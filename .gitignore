@@ -31,3 +31,5 @@ drafted/
 *.png
 *.csv
 *.task
+
+*.joblib
