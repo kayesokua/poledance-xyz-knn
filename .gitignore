@@ -29,7 +29,7 @@ __pycache__/
 drafted/
 
 *.png
-*.csv
-*.task
+data/**/*.csv
+
 
 *.joblib
