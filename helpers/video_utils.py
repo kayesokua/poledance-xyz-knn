@@ -24,10 +24,6 @@ def save_video_image(frame, output_dir, frame_count, second):
     cv2.imwrite(frame_file_path, frame)
     
 def process_video_images(video_path, output_dir, interval, fps):
-    
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    
     cap = cv2.VideoCapture(video_path)
     frame_count = 0
     image_count = 0
