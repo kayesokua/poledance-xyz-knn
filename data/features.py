@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv("data/training-selected/all/pose_data_augmented_z_res_0301.csv")
+data = pd.read_csv("data/training-set-2/all/pose_data_augmented_z_res_0301.csv")
 
 p_labels = data['label_encoded'].values
 d_labels = data['difficulty'].values
