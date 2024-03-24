@@ -15,23 +15,22 @@ def get_video_properties(video_path):
     fps = cap.get(cv2.CAP_PROP_FPS)
     total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
     duration_in_seconds = total_frames / fps
-    frame_interval = int(0.2 * fps)  # 5 frames per second
+    frame_interval = int(fps) # all frames per second
     cap.release()
     return fps, frame_interval, duration_in_seconds
-
+    
 def save_video_image(frame, output_dir, frame_count, second):
     frame_file_path = os.path.join(output_dir, f'{second:04d}_{frame_count:08d}.png')
     cv2.imwrite(frame_file_path, frame)
     
-def process_video_images(video_path, output_dir, interval, fps):
-    
+def process_video_images(video_path, output_dir, fps):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     
     cap = cv2.VideoCapture(video_path)
     frame_count = 0
     image_count = 0
-    max_duration_in_seconds = 6 * 60
+    max_duration_in_seconds = 6 * 60  # Optional: Limit processing to first 6 minutes
 
     while cap.isOpened():
         current_second = int(frame_count / fps)
@@ -40,11 +39,11 @@ def process_video_images(video_path, output_dir, interval, fps):
 
         ret, frame = cap.read()
         if ret:
-            if frame_count % interval == 0:
-                save_video_image(frame, output_dir, frame_count, current_second)
-                image_count += 1
+            save_video_image(frame, output_dir, frame_count, current_second)
+            image_count += 1
             frame_count += 1
         else:
             break
+    
     cap.release()
     return image_count

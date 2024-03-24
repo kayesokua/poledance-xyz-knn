@@ -17,7 +17,6 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 
 def pca_reduced_knn_training_validation(X_scaled,y,pose_names,n_components,n_neighbors,test_size):
-    
     unique_poses = np.unique(pose_names)
     color_values = cm.viridis(np.linspace(0, 1, num=len(unique_poses)))    
     X_train, X_test, y_train, y_test, pose_names_train, pose_names_test = train_test_split(X_scaled, y, pose_names, stratify=y, test_size=test_size)
