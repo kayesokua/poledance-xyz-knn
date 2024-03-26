@@ -1,0 +1,2 @@
+data/test/processed/superman/03/0000_00000017.png
+data/test/processed/superman/03/0000_00000019.png

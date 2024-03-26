@@ -1,0 +1,2 @@
+data/test/processed/fireman/03/0001_00000037.png
+data/test/processed/fireman/03/0002_00000082.png

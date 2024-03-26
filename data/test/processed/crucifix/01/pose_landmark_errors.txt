@@ -1,0 +1,7 @@
+data/test/processed/crucifix/01/0005_00000301.png
+data/test/processed/crucifix/01/0005_00000302.png
+data/test/processed/crucifix/01/0006_00000409.png
+data/test/processed/crucifix/01/0006_00000410.png
+data/test/processed/crucifix/01/0008_00000531.png
+data/test/processed/crucifix/01/0008_00000532.png
+data/test/processed/crucifix/01/0011_00000698.png
